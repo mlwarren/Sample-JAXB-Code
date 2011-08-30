@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="stringtype">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="inttype">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	
+	<xs:element name="Person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name ="FirstName" type="stringtype" minOccurs="1" maxOccurs="1"/>
+				<xs:element name ="LastName" type="stringtype" minOccurs="1" maxOccurs="1"/>
+				<xs:element name ="PhoneNumber" type="inttype" minOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
